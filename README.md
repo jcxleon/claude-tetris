@@ -86,6 +86,10 @@ Después abre `http://localhost:8000` en el navegador.
 | `Espacio` | Hard drop (caída instantánea)     |
 | `P`       | Pausar / reanudar                 |
 
+### Tema claro / oscuro
+
+El botón **Modo claro / Modo oscuro** (arriba a la derecha) alterna el tema. El juego siempre arranca en modo oscuro la primera vez; si cambias el tema, la preferencia se guarda en `localStorage` y se recuerda en la siguiente visita.
+
 ---
 
 ## Cómo funciona
@@ -102,7 +106,7 @@ Define la estructura visual:
 
 ### 2. `style.css`
 
-Aporta el aspecto visual con estética _dark / retro arcade_: fondo oscuro, tipografía monoespaciada para los marcadores y _backdrop blur_ en los overlays.
+Aporta el aspecto visual con estética _dark / retro arcade_: fondo oscuro, tipografía monoespaciada para los marcadores y _backdrop blur_ en los overlays. Los colores son variables CSS definidas en `:root` (oscuro) y `:root[data-theme="light"]` (claro).
 
 ### 3. `game.js`
 

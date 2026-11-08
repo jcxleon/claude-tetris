@@ -4,11 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tetris</title>
+  <script>
+    // Aplica el tema guardado antes del primer pintado (evita el destello).
+    try {
+      if (localStorage.getItem('tetris-theme') === 'light') {
+        document.documentElement.dataset.theme = 'light';
+      }
+    } catch (e) { /* oscuro por defecto */ }
+  </script>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="wrapper">
     <h1 class="title">TETRIS</h1>
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false">Modo claro</button>
 
     <div class="game-container">
       <canvas id="board" width="300" height="600"></canvas>
